@@ -6,8 +6,6 @@ Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('ver
 
 Route::get('/', function () { return view('index'); })->middleware('guest');
 
-Route::post('/article/{article}/comment', 'CommentController@store');
-
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => ['auth','verified']], function() {
