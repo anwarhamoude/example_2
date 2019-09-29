@@ -1,3 +1,43 @@
+<h3>Simple project example utilizing route middleware and CRUD operations.</h3>
+
+<h2>Project Instructions</h2>
+
+<h3>Clone the project and follow the standard initial setup steps.</h3>
+
+<p>key:generate</p>
+
+<p>npm install</p>
+
+<strong>Review env.example file → copy to .env</strong>
+
+<p>Note this project uses email account verification, disable it if you like or follow basic instructions in env.example file for easy setup.</p>
+
+<p>user image file uploads to local storage, this will require symbolic link to public folder.</p>
+
+<strong>php artisan storage:link</strong>
+
+<p>User profile requires default image, use default.jpg inside public/images folder or another image.</p>
+
+<strong>copy default.jpg to storage/public/avatars</strong>
+
+<p>NOTE: The file location will not appear until you upload a user image through the application, or if it is in the public folder <strong>storage/avatars</strong> should be deleted and <strong>php artisan storage:link</strong> should be run from terminal to ensure files will upload properly.</p>
+
+<p>admin user is setup with middleware</p>
+
+<strong>app/Http/Middleware/Administrators.php</strong>
+
+<p>Admin email is: <strong>galacticcurry@aol.com</strong></p>
+
+<p>Visit routes file, <strong> routes/web.php</strong></p>
+
+<p>Take note of web routes file, as admin routes are prepended with <i>/admin</i> and only accessible for user registered with <strong>galacticcurry@aol.com</strong> which can be easily changed in <strong>app/Http/Middleware/Administrators.php</strong> or middleware can be removed in web routes file.</p>
+
+<p>You need to manually modify the URL to direct to <i>admin pages</i> or build a main admin index page. This is only a basic example and not intended to be a production application, this project is a simplified version of a websockets example which I have removed.</p>
+
+<p>It is standard RESTful API, so there is nothing to misunderstand.</p>
+
+p>note: I am using php7.3 and MySQL 8 on my development machine, as I do not know of any compatibility issues with previous versions I still recommend using the latest version of php.</p>
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
